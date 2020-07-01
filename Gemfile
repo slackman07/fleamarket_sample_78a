@@ -65,9 +65,9 @@ group :production do
 end
 
 gem 'devise'
-gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
 gem 'fog-aws'
 gem 'rubocop', require: false
+# gem 'font-awesome-sass'
