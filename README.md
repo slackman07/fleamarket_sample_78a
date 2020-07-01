@@ -51,16 +51,7 @@
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image1|text|null: false|
-|image2|text||
-|image3|text||
-|image4|text||
-|image5|text||
-|image6|text||
-|image7|text||
-|image8|text||
-|image9|text||
-|image10|text||
+|image|string|null: false|
 |product_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :item
@@ -71,7 +62,7 @@
 |------|----|-------|
 |name|string|null: false|
 |ancestry|integer|null: false|
-|product_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :items
 
