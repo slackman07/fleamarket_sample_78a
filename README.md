@@ -6,7 +6,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
-|mail|string|null: false, unique: true|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 |last_name|string|null: false|
 |first_name|string|null: false|
@@ -25,7 +25,7 @@
 |phone|integer||
 ### Association
 - has_many :items
-- belongs_to :card
+- has_one :card
 
 
 ## itemsテーブル
@@ -41,18 +41,18 @@
 |delivery_day|string|null: false|
 |price|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|image_id|integer|null: false, foreign_key: true|
+|category_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :category
-- belongs_to :image
+- has_many :image
 
 
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null: false|
-|product_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :item
 
@@ -62,7 +62,6 @@
 |------|----|-------|
 |name|string|null: false|
 |ancestry|integer|null: false|
-|item_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :items
 
